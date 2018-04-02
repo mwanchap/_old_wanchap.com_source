@@ -1,0 +1,154 @@
+﻿@{
+    _Layout = "./template/Layout.cshtml";
+    ViewBag.Title = Model.Name;
+}
+
+<!-- Header -->
+<div id="header" class="skel-layers-fixed">
+
+    <div class="top">
+
+        <!-- Logo -->
+        <div id="logo">
+            <span class="image avatar"><img src="/assets/images/me.jpg" alt="" /></span>
+            <h1 id="title">@Model.Name</h1>
+
+            @foreach (var tag in Model.Taglines)
+            {
+                <p>@tag</p>
+            }
+        </div>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Intro</span></a></li>
+                <li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">About Me</span></a></li>
+                <li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Portfolio</span></a></li>
+                <li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
+                <li><a href="http://blog.wanchap.com" id="foobar-link"><span class="icon fa-comment label">Blog</span></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="bottom">
+        <!-- Social Icons -->
+        @*<ul class="icons">
+            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+            <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+            <li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+            <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+        </ul>*@
+    </div>
+
+</div>
+
+<!-- Main -->
+<div id="main">
+
+    <!-- Intro -->
+    <section id="top" class="one dark cover">
+        <div class="container">
+
+            <header>
+                <h2 class="alt">Hi there! I&apos;m <strong>@Model.Name</strong></h2>
+                <p>@Model.Description</p>
+            </header>
+
+        </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="two">
+        <div class="container">
+
+            <header>
+                <h2>More About Me</h2>
+            </header>
+
+            <a href="#" class="image featured"><img src="/assets/images/pic08.jpg" alt="" /></a>
+
+            <p>I&apos;ve been working with software professionally in some form or another since around 2008.  If I had to pick my favourite things about my work, they would be:</p>
+
+            <ul class="default">
+                <li>Building software tools to help people work more efficiently and effectively</li>
+                <li>Working within legacy codebases to improve things, while learning from how others have tackled their challenges</li>
+                <li>Integrating systems, especially those that weren&apos;t designed to be integrated</li>
+                <li>Identifying and addressing security vulnerabilities in web-based applications</li>
+                <!--<li>Optimising processes or content delivery</li>
+                <li>Teaching and mentoring</li>-->
+
+            </ul>
+
+            <p>Ever since my parents brought home my first computer when I was in grade 3, I&apos;d wanted to be a computer programmer.  I first started programming in high school and jumped straight into an IT degree at uni.  During my postgrad year I worked part-time at a small web development company called Creative Infusion (which no longer exists) and, full of the hubris of youth I thought, how hard could it be?  So I ambitiously tried to start my own little web development business; unfortunately being fresh out of an IT degree I didn&apos;t have much in the way of business skills, so it was a very humbling experience!</p>
+            <p>Since then I&apos;ve developed solutions for the <a href="http://www.caradata.com/">healthcare</a>, <a href="http://www.hills.com.au/">business services</a> and <a href="http://www.centrepointalliance.com.au/">finance</a> industries, as well as teaching two classes (C# programming and web dev) as a teacher at the <a href="http://acit.edu.au/">Australian College of IT</a>.</p>
+            <p>In 2014 I somehow convinced an amazing woman to marry me and the adventures we&apos;ve been on so far have been the best yet!</p>
+        </div>
+    </section>
+
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="three">
+        <div class="container">
+
+            <header>
+                <h2>Some things I&apos;ve been working on</h2>
+            </header>
+
+            <p>I don&apos;t really spend as much time on personal projects as I used to, but here&apos;s some of the projects I&apos;ve been doing lately:</p>
+
+            <div class="row">
+                <div class="4u">
+                    <article class="item">
+                        <a href="#" class="image fit"><img src="/assets/images/pic02.jpg" alt="" /></a>
+                        <header>
+                            <h3>This website!</h3>
+                            <i>via the cheapest webhosting I could come up with</i>
+                        </header>
+                    </article>
+                    <article class="item">
+                        <a href="https://bitbucket.org/mwanchap/lync-to-salesforce" class="image fit"><img alt="Lync To Salesforce" src="/assets/images/pic03.jpg" alt="" /></a>
+                        <header>
+                            <h3>Lync To Salesforce</h3>
+                            <i>An open-source integration/automation project to help busy people save time</i>
+                        </header>
+                    </article>
+                </div>
+                <div class="4u">
+                    <article class="item">
+                        <a href="#" class="image fit"><img alt="Two Word Derby" src="/assets/images/pic04.jpg" alt="" /></a>
+                        <header>
+                            <h3>Two Word Derby</h3>
+                        </header>
+                    </article>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="four">
+        <div class="container">
+
+            <header>
+                <h2>Contact</h2>
+            </header>
+
+            <p>If you&apos;d like to get in touch with me, you&apos;ll easily be able to find me on <a href="https://www.facebook.com/mwanchap">Facebook</a>, <a href="https://au.linkedin.com/pub/matt-wanchap/99/3a9/56">LinkedIn</a>, <a href="https://plus.google.com/113634524142949786020">Google+</a> or you can email me at <i>[my first name]</i>@@wanchap.com.</p>
+
+        </div>
+    </section>
+
+</div>
+
+<!-- Footer -->
+<div id="footer">
+
+    <!-- Copyright -->
+    <ul class="copyright">
+        <li>&copy; Matt Wanchap. All rights reserved.</li>
+    </ul>
+
+</div>
